@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>Обрахунок</title>
+</head>
+<script>
+    function calc(form) {
+        let k = form.n1.value
+        let w = form.n2.value
+        let d = form.n3.value
+        form.result1.value = Math.sqrt(k*w+d*d) + Math.cos(k/d);
+        form.result2.value = (Math.pow(d+w,2))/(d* Math.log(k));
+    }
+</script>
+
+<body>
+    <form>
+        <table border=1 cellspacing=4 width=450 bgcolor="white">
+            <tr align=center>
+                <th align=right width=125>Формула для розрахунку:</th>
+                <td>k=<input type=text name=n1 size=15><br>
+                    w=<input type=text name=n2 size=15><br>
+                    d=<input type=text name=n3 size=15><br>
+                    
+                <td rowspan=2><input type=button value=" Обчислити " onclick="calc(this.form)"></td>
+            </tr>
+            <tr align=center>
+                <th align=right>Результат:</th>
+                <td>s=<input type=text name=result1 size=15><br>
+                    r=<input type=text name=result2 size=15></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
